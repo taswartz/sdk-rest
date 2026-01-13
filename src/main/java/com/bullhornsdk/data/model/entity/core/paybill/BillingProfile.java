@@ -114,7 +114,7 @@ public class BillingProfile extends CustomFieldsB implements QueryEntity,
         this.id = id;
     }
 
-    @JsonIgnore
+    @JsonProperty("bccRecipients")
     public OneToMany<Person> getBccRecipients() {
         return bccRecipients;
     }
@@ -174,7 +174,7 @@ public class BillingProfile extends CustomFieldsB implements QueryEntity,
         this.billingLocation = billingLocation;
     }
 
-    @JsonIgnore
+    @JsonProperty("ccRecipients")
     public OneToMany<Person> getCcRecipients() {
         return ccRecipients;
     }
@@ -306,7 +306,7 @@ public class BillingProfile extends CustomFieldsB implements QueryEntity,
         this.owner = owner;
     }
 
-    @JsonIgnore
+    @JsonProperty("toRecipients")
     public OneToMany<Person> getToRecipients() {
         return toRecipients;
     }
